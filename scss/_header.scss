@@ -1,0 +1,56 @@
+header{
+    position: fixed;
+    z-index: 2021;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $brand-color;
+    height: 11.9rem;
+    display: flex;
+    align-items: center;
+    @include responsive(1090px){
+        height: 8rem;
+    }
+    .container{
+        @include flex (row, center, space-between)
+    }
+    @include responsive(610px){
+        .container{
+            justify-content: center;
+        }
+        .logo{
+            max-width: 16.4rem;
+            img{
+                max-width: 100%;
+            }
+        }
+        nav{
+            display: none;
+        }
+        
+    }
+    nav{
+        ul{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            li{
+            &:not(:first-child){
+            margin-left: 5.6rem;
+        }
+                a{
+                    font-family: 'Lato';
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: $text-nav;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        margin-right: 15px;
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+.s-recurses{
+    .container{
+        .text{
+            @include flex(row, center, space-between);
+            margin-top: 14.9rem;
+            padding-bottom: 5.3rem;
+
+            h2{
+                width: 100%;
+                max-width: 50.2rem;
+                height: 8.4rem;
+                font-family: 'PT Sans';
+                font-weight: 700;
+                font-size: 3.2rem;
+                line-height: 130%;
+                color: $text-01;
+            }
+            p{
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 150%;
+                color: $text-02;
+            }
+        }
+        .recurses{
+            display: flex;
+            margin-bottom: 10rem;
+            .card{
+                padding-top: 4rem;
+                padding-left: 4rem;
+                width: 100%;
+                max-width: 28rem;
+                height: 32.3rem;
+                
+                h6{
+                    margin-top: 3rem;
+                    font-weight: 800;
+                    font-size: 1.8rem;
+                    line-height: 2.2rem;
+                    color: $brand-color;
+                }
+                p{
+                    margin-top: 2rem;
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                    line-height: 165%;
+                    color: $text-02;
+                }
+                .image{
+                    @include flex(center, center, center);
+                    background-color: rgba(197, 190, 220, 0.1); 
+                    width: 100%;
+                    height: 6.4rem;
+                    max-width: 6.4rem;
+                    border-radius: 12px;
+
+                }
+                &.first{
+                    background-color: rgba(197, 190, 220, 0.1);
+                    margin-right: 3rem;
+                    border-radius: 12px;
+                    p{
+                        width: 100%;
+                        max-width: 20.4rem;
+                    }
+                    .image{
+                        background-color: $third-color;
+                    }
+                }
+                }
+                .others-cards{
+                    width: 100%;
+                    max-width: 90.4rem;
+                    height: 32.3rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid rgba(95, 60, 161, 0.1);
+                    border-radius: 1px
+                    ;
+
+                }
+            }
+            @include responsive(991px){
+
+
+                .text{
+                    flex-direction: column;
+                    h2{
+                        text-align: center;
+                    }
+                    p{
+                        padding-top: 2rem;
+                    }
+                }
+                .recurses{
+                    flex-direction: column;
+                    max-width: 100%;
+                    width: 100%;
+                    text-align: center;
+                    .card{
+                        padding: 3rem;
+                        max-width: 100%;
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                        &.first p{
+                                max-width: 100%;
+                        }
+                    }
+                    .others-cards{
+                        flex-direction: column;
+                        max-width: 100%;
+                        width: 100%;
+                        border-bottom: 0;
+
+                    }
+                }
+            }
+            @include responsive(480px){
+                padding: 0;
+                margin: 0;
+                .recurses{
+                .card{
+                    h6{
+                        font-size: 2.4rem;
+                    }
+                    p{
+                    font-size: 2rem;
+
+                    }
+                }
+            }
+                .text{
+                    p{
+                        font-size: 2.4rem;
+                        text-align: center;
+                    }
+                    h2{ 
+                        padding: 0 30px;
+                        margin-bottom: 5rem;
+                        font-size: 3.8rem;
+                    }
+                }
+            }
+
+            
+    }
+
+}

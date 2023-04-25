@@ -1,0 +1,150 @@
+.s-hero{
+    padding-top: 3.9rem;
+    background-color: $brand-color;
+    margin-top: 11.9rem;
+    @include responsive(1090px){
+        margin-top: 8rem;
+    }
+    .container{
+        @include flex (row, center, space-between)
+    }
+    .text{
+        height: 45.8rem;
+        color: $third-color;
+        h1{
+            font-family: 'PT Sans';
+            font-weight: 700;
+            font-size: 4.8rem;
+            line-height: 120%;
+        }
+        p{ 
+            padding-top: 1.6rem;
+            width: 100%;
+            max-width: 48.8rem;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            @include responsive(480px){
+                font-size: 2.2rem;
+            }
+        }
+        button{
+            @include style-btn(5.4rem, $second-color, $brand-color);
+            margin-top: 4.8rem;
+            margin-bottom: 8.6rem;
+            @include responsive(480px){
+                transform: scale(1.5);
+                margin-bottom: 300px;
+            }
+    }
+    }
+    .conheca{
+
+        height: 4.2rem;
+        display: flex;
+        align-items: center;
+        .icon{
+            border-radius: .6rem;
+            max-width: 4.2rem;
+            height: 4.2rem;
+            width: 100%;
+            @include flex(center, center, center);
+            margin-right: 1.6rem;
+            background-color: rgba(124, 90, 186, 0.21);
+        }
+        span{
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1.9rem;
+        }
+        @include responsive(480px){
+            .conheca{
+            margin-top: 10rem;
+        }
+    }
+    }
+    .image{
+        position: relative;
+        top: 3.7rem;
+    }
+    @include responsive(1280px){
+        .text{
+            button{
+            margin-bottom: 4rem;
+            margin-top: 2.8rem;
+
+
+            }
+        }
+    }
+    @include responsive(1090px){
+        .container{
+            flex-direction: column;
+            .image{
+                padding-top: 5rem;
+                position: relative;
+                right: 2rem;
+                width: 70%;
+                img{
+                    width: 100%;
+                }
+            }
+            .text{
+                height: 37rem;
+                h1{
+                    text-align: center;
+                }
+                p{
+                    max-width: 400px;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                button{
+                    margin: 0 auto;
+                    margin-top: 2rem;
+                    display: block;
+                }
+            }
+            .conheca{
+                margin-top: 4rem;
+                justify-content: center;
+            }
+            
+        }
+    }
+    @include responsive(610px){
+        .image{
+            padding-top: 10rem;
+        }
+    }
+    @include responsive(441px){
+        .container{
+            .conheca{
+                margin-top: 10rem;;
+            }
+        }
+        .image{
+            margin-top: 10rem;
+            padding-top: 4rem;
+
+    }
+}
+
+
+}
+
+@include responsive(1280px){
+    html{
+        font-size: 55%;
+
+    }
+}
+    
+    @include responsive(480px){
+    html{
+        font-size: 40%;
+    }
+}
